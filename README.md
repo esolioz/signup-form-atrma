@@ -11,8 +11,8 @@ Ce projet est une implémentation simple et didactique d'une page de créaiton d
 ## 🛠️ Technologies Utilisées
 
 * **HTML5** : Pour la structure sémantique du formulaire.
-* **CSS3** : Pour le stylisme et la présentation visuelle.
-* **Vanilla JavaScript** : Pour la validation du formulaire et la gestion des événements (clic sur le bouton, etc.).
+* **CSS** : Pour le stylisme et la présentation visuelle.
+* **JavaScript** : Pour la validation du formulaire et la gestion des événements (clic sur le bouton, etc.).
 
 ## 📖 Fonctionnalités
 
