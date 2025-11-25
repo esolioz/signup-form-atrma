@@ -1,7 +1,4 @@
-# signup-form-atrma
-Introduction au développement web
-
-# 🔒 Projet : Formulaire de création d'un compte (Signup Page)
+# 🔒 Formulaire de création d'un compte (Signup Page)
 
 Ce projet est une implémentation simple et didactique d'une page de créaiton d'un compte (Signup) construite à l'aide des technologies fondamentales du développement web : HTML, CSS et JavaScript.
 
