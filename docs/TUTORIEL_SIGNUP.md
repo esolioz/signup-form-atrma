@@ -18,9 +18,9 @@ Dans le dossier `assets/ui-design`, vous trouverez des fichiers d'illustration (
 
 Aperçu des maquettes :
 
-![Maquette Desktop](assets/ui-design/sign-up-desktop.png)
+![Maquette Desktop](../sign-up-desktop.png)
 
-![Maquette Mobile](assets/ui-design/sign-up-mobile.png)
+![Maquette Mobile](../sign-up-mobile.png)
 
 > Comparez régulièrement votre page à ces images pour obtenir un résultat fidèle à la maquette !
 
