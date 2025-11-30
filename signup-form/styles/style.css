@@ -1,0 +1,423 @@
+/* Reset & Base */
+/*
+  Feuille de style principale pour la page de signup.
+  Convention BEM utilisée pour nommer les classes.
+  Chaque bloc, élément et modificateur est clairement séparé.
+*/
+
+/* --- RESET & BASE --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f7fa; /* Couleur de fond douce */
+    min-height: 100vh;
+    display: flex; /* Centre le contenu verticalement et horizontalement */
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- CONTAINER PRINCIPAL --- */
+.signup {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- CARD PRINCIPALE (contient la partie gauche et droite) --- */
+.signup__card {
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    height: 600px;
+    background: #fff;
+    border-radius: 32px; /* Bords arrondis */
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12); /* Ombre douce */
+    overflow: hidden;
+}
+
+.signup {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup__card {
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    height: 600px;
+    background: #fff;
+    border-radius: 32px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    overflow: hidden;
+}
+.signup__card-left {
+    position: relative;
+    width: 48%;
+    background: #e6eaf3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+    overflow: hidden;
+    padding: 8px 8px 8px 8px;
+    box-sizing: border-box;
+}
+/* Header de la partie gauche : logo + bouton retour */
+.signup__card-left-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px 0 16px;
+    position: absolute;
+    width: calc(100% - 40px);
+    left: 8px;
+    top: 8px;
+    z-index: 10;
+}
+.signup__back-btn {
+    margin-right: 0;
+}
+
+.signup__amu-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3958;
+    letter-spacing: 2px;
+}
+.signup__back-btn {
+    background: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    color: #2d3958;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.signup__back-btn:hover {
+    background: #e6eaf3;
+}
+.signup__arrow {
+    font-size: 1.2em;
+    margin-left: 6px;
+    display: inline-block;
+    transition: transform 0.25s cubic-bezier(.4,1.6,.6,1);
+}
+.signup__back-btn:hover .signup__arrow {
+    transform: translateX(6px);
+}
+/* Image de fond avec arrondis à gauche */
+.signup__image-bg {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+    filter: brightness(0.93);
+    z-index: 1;
+}
+/* Footer gauche : carrousel de texte + indicateurs */
+.signup__card-left-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Carrousel de slogans */
+.signup__carousel-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    position: relative;
+    margin-bottom: 18px;
+}
+.signup__carousel-item {
+    opacity: 0;
+    position: absolute;
+    left: 0; right: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: opacity 0.5s;
+}
+.signup__carousel-item--active {
+    opacity: 1;
+    position: relative;
+}
+/* Indicateurs du carrousel (petits traits) */
+.signup__carousel-indicators {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.signup__carousel-indicator {
+    width: 22px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255,255,255,0.5);
+    transition: background 0.3s;
+}
+.signup__carousel-indicator--active {
+    background: #fff;
+}
+.signup__card-right {
+    width: 52%;
+    background: #fff;
+    padding: 56px 48px 48px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+}
+
+.signup__card-right h2 {
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-size: 2rem;
+    color: #2d3958;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.signup__form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.signup__form-row {
+    display: flex;
+    gap: 16px;
+}
+/* Champs de saisie génériques (input) */
+.signup__input {
+    border-radius: 16px;
+    border: 2px solid #e6eaf3;
+    padding: 12px 16px;
+    font-size: 1rem;
+    outline: none;
+    background: #f5f7fa;
+    transition: border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Effet focus : couleur de bordure + outline sans effet de layout */
+.signup__input:focus {
+    border: 2px solid #7d8fff;
+    outline: 2px solid #bfcaff33;
+    outline-offset: 0px;
+}
+.signup__input[type="email"] {
+    display: block;
+}
+.signup__password-row.signup__password-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.signup__password-row.signup__password-group input[type="password"] {
+    width: 100%;
+    padding-right: 90px;
+}
+.signup__toggle-password {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: #e6eaf3;
+    color: #2d3958;
+    border-radius: 12px;
+    padding: 8px 14px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    z-index: 2;
+}
+.signup__toggle-password:hover {
+    background: #d1d8e6;
+}
+/* Ligne de la case à cocher "Terms & Conditions" */
+.signup__checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.97rem;
+    color: #2d3958;
+}
+.signup__checkbox-row input[type="checkbox"] {
+    accent-color: #7d8fff;
+    width: 18px;
+    height: 18px;
+    border-radius: 6px;
+}
+.signup__checkbox-row .signup__checkbox-label {
+    color: #7d8fff;
+    text-decoration: none;
+    margin-left: 3px;
+}
+/* Bouton principal "Create account" */
+.signup__create-account-btn {
+    margin-top: 8px;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(90deg, #7d8fff 0%, #5a6cff 100%);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 14px 0;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(125,143,255,0.10);
+}
+.signup__create-account-btn:hover {
+    background: linear-gradient(90deg, #5a6cff 0%, #7d8fff 100%);
+}
+/* Séparateur "Or register with" */
+.signup__divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 18px 0 8px 0;
+}
+.signup__divider .signup__line {
+    flex: 1;
+    height: 1.5px;
+    background: #e6eaf3;
+    border-radius: 1px;
+}
+.signup__divider .signup__or {
+    color: #a0a8bb;
+    font-size: 0.97rem;
+    font-weight: 500;
+}
+/* Ligne des boutons sociaux (Google/Apple) */
+.signup__social-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+/* Boutons sociaux génériques */
+.signup__social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 14px;
+    background: #f5f7fa;
+    color: #2d3958;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 0;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 1px 4px rgba(44,57,88,0.06);
+}
+.signup__social-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+/* Bouton Google (fond clair, bord) */
+.signup__social-btn--google {
+    background: #fff;
+    border: 1px solid #e6eaf3;
+}
+/* Bouton Apple (fond noir, texte blanc) */
+.signup__social-btn--apple {
+    background: #222;
+    color: #fff;
+    border: 1px solid #222;
+}
+/* Forcer l'icône Apple en blanc sur fond sombre */
+.signup__social-btn--apple .signup__social-icon {
+    filter: brightness(0) invert(1);
+}
+/* Effet hover sur les boutons sociaux */
+.signup__social-btn:hover {
+    background: #e6eaf3;
+}
+/* Hover spécifique Apple (fond gris foncé) */
+.signup__social-btn--apple:hover {
+    background: #444;
+}
+/* --- RESPONSIVE : Largeur réduite sur écrans moyens --- */
+@media (max-width: 1100px) {
+    .signup__card {
+        width: 98vw;
+        height: 95vh;
+    }
+}
+/* --- RESPONSIVE : Affichage mobile, cache la partie gauche et adapte la card/formulaire --- */
+@media (max-width: 800px) {
+    .signup__card {
+        flex-direction: column;
+        width: 100vw;
+        max-width: 100vw;
+        height: auto;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        margin: 16px;
+    }
+    .signup__card-left {
+        display: none !important;
+    }
+    .signup__card-right {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 32px 12px 32px 12px;
+        border-radius: 0 0 24px 24px;
+        overflow: hidden;
+        background: transparent;
+        box-shadow: none;
+    }
+    .signup__form {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .signup__form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .signup__password-row.signup__password-group {
+        flex-direction: column;
+        align-items: stretch;
+        position: relative;
+        gap: 0;
+    }
+    .signup__password-row.signup__password-group input[type="password"] {
+        padding-right: 48px;
+    }
+    .signup__toggle-password {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px 10px;
+    }
+}
