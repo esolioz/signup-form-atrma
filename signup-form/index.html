@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup - AMU</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+    <div class="signup">
+        <div class="signup__card">
+            <!-- Partie Gauche -->
+            <div class="signup__card-left">
+                <div class="signup__card-left-header">
+                    <span class="signup__amu-title">AMU</span>
+                    <button class="signup__back-btn">
+                        Back to website
+                        <span class="signup__arrow">→</span>
+                    </button>
+                </div>
+                <div class="signup__image-bg"></div>
+                <div class="signup__card-left-footer">
+                    <div class="signup__carousel-text">
+                        <span class="signup__carousel-item signup__carousel-item--active">Capturing Moments, Creating
+                            Memories</span>
+                        <span class="signup__carousel-item">Share Your Story, Inspire Others</span>
+                        <span class="signup__carousel-item">Join Our Community Today</span>
+                    </div>
+                    <div class="signup__carousel-indicators">
+                        <span class="signup__carousel-indicator signup__carousel-indicator--active"></span>
+                        <span class="signup__carousel-indicator"></span>
+                        <span class="signup__carousel-indicator"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Partie Droite -->
+            <div class="signup__card-right">
+                <h2 class="signup__title">Create an Account</h2>
+                <form class="signup__form">
+                    <div class="signup__form-row">
+                        <input type="text" placeholder="First Name" name="firstname" class="signup__input" required />
+                        <input type="text" placeholder="Last Name" name="lastname" class="signup__input" required />
+                    </div>
+                    <input type="email" placeholder="E-mail" name="email" class="signup__input" required />
+                    <div class="signup__password-row signup__password-group">
+                        <input type="password" placeholder="Password" name="password" id="password"
+                            class="signup__input" required />
+                        <button type="button" class="signup__toggle-password" onclick="togglePassword()">Show</button>
+                    </div>
+                    <div class="signup__checkbox-row">
+                        <input type="checkbox" id="terms" name="terms" class="signup__checkbox" required />
+                        <label for="terms" class="signup__checkbox-label">I agree to the <a href="#">Terms &
+                                Conditions</a></label>
+                    </div>
+                    <button type="submit" class="signup__create-account-btn">Create account</button>
+                    <div class="signup__divider">
+                        <span class="signup__line"></span>
+                        <span class="signup__or">Or register with</span>
+                        <span class="signup__line"></span>
+                    </div>
+                    <div class="signup__social-row">
+                        <button type="button" class="signup__social-btn signup__social-btn--google">
+                            <img src="assets/img/google-logo.svg" alt="Google" class="signup__social-icon" width="20"
+                                height="20" />
+                            Google
+                        </button>
+                        <button type="button" class="signup__social-btn signup__social-btn--apple">
+                            <img src="assets/img/apple-logo.svg" alt="Apple" class="signup__social-icon" height="20" />
+                            Apple
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/signup.js"></script>
+</body>
+
+</html>
